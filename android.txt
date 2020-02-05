@@ -1,0 +1,3 @@
+title=KivyCRM
+author=Pavel Tanchev
+orientation=all
