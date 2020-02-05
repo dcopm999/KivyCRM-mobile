@@ -1,0 +1,5 @@
+Kivy>=1.11.1
+Kivy-Garden>=0.1.4
+cython>=0.29.14
+jnius>=1.1.0
+virtualenvwrapper>=4.8.4

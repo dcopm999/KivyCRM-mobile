@@ -14,6 +14,29 @@ Features
 Usage
 -----
 
+Linux requirements
+~~~~~~~~~~~~~~~~~~
+
+add to /etc/apt/sources.list repository record:
+
+    deb http://mirror.yandex.ru/debian/ oldstable main
+
+    
+sudo apt-get install python3-distutils python3-dev python3-pip
+
+sudo apt install -y git zip unzip python3-pip autoconf autotools-dev openjdk-8-jdk libtool pkg-config zlib1g-dev libncurses5-dev libncursesw5-dev libtinfo5 cmake libffi-dev libltdl-dev liblld-7-dev llvm-7-dev libssl-dev virtualenvwrapper
+
+
+sudo pip3 install -r ./requirements.txt
+
+change java version to 1.8 with command:
+
+    sudo update-alternatives --config java
+
+git clone https://github.com/kivy/buildozer.git
+cd buildozer
+sudo python3 setup.py install
+
 Launching the app
 ~~~~~~~~~~~~~~~~~
 
