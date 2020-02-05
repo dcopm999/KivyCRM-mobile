@@ -1,5 +1,60 @@
 #:kivy 1.8.0
 
-Button:
-    text: 'Hello World'
+
+<LoginModal>:
+	size_hint: 0.8, 0.5
+	padding: 25
+	
+	username: username_input
+	password: password_input
+	status: status_label
+
+	BoxLayout:
+		orientation: 'vertical'
+		
+		AnchorLayout:
+			size_hint: 1, 0.3
+		
+			Label:
+				id: status_label
+				text: 'Authorization'
+				text_size: self.size
+				font_size: '17sp'
+				halign: 'center'
+				valign: 'center'
+				
+		BoxLayout:
+			orientation: 'vertical'
+			spacing: 10
+
+			Label:
+				id: status_label
+				text: 'Please enter login and pasword...'
+				text_size: self.size
+				color: 0,1,0,1
+				halign: 'center'
+				valign: 'center'
+
+			TextInput:
+				id: username_input
+				name: 'username'
+				hint_text: 'Login...'
+				multiline: False
+
+			TextInput:
+				id: password_input
+				name: 'passowrd'
+				hint_text: 'Password...'
+				multiline: False
+				password: True
+				
+			Button:
+				text: 'Login'
+				on_release:
+					root.login_callback()
+
+			Button:
+				text: 'Exit'
+				on_release:
+					exit()
 
