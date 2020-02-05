@@ -1,5 +1,4 @@
 #Emacs
-
 *~
 
 # Vim
@@ -13,8 +12,13 @@ __pycache__/
 # C extensions
 *.so
 
+# buildozer
+.buildozer
+buildozer
+
 # Distribution / packaging
 .Python
+venv/
 env/
 bin/
 build/
