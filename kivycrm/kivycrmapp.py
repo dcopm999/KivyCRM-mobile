@@ -6,7 +6,7 @@ from kivy.logger import Logger
 from kivy.uix.screenmanager import ScreenManager
 from kivycrm.libraries import (modals, screens)
 
-Window.size = (380, 640)
+
 Config.set('kivy', 'keymoard_move', 'systemanddoc')
 
 

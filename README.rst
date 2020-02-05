@@ -24,7 +24,7 @@ add to /etc/apt/sources.list repository record:
     
 sudo apt-get install python3-distutils python3-dev python3-pip
 
-sudo apt install -y git zip unzip python3-pip autoconf autotools-dev openjdk-8-jdk libtool pkg-config zlib1g-dev libncurses5-dev libncursesw5-dev libtinfo5 cmake libffi-dev libltdl-dev liblld-7-dev llvm-7-dev libssl-dev virtualenvwrapper
+sudo apt install -y git zip unzip python3-pip autoconf autotools-dev openjdk-8-jdk libtool pkg-config zlib1g-dev libncurses5-dev libncursesw5-dev libtinfo5 cmake libffi-dev libltdl-dev liblld-7-dev llvm-7-dev lld libssl-dev virtualenvwrapper
 
 
 sudo pip3 install -r ./requirements.txt

@@ -1,5 +1,27 @@
 #:kivy 1.11.1
+<SettingsScreen>:
+	ActionBar:
+		ActionView:
+			ActionPrevious:
+				title: 'Settings'
+				on_release:
+					app.root.currrent = 'Main'
 
+<MainScreen>:
+	ActionBar:
+		ActionView:
+			ActionPrevious:
+				title: 'Main'
+
+			ActionButton:
+				text: 'Settings'
+				on_release:
+					app.root.current = 'Settings'
+
+			ActionSeparator:
+			ActionButton:
+				text: 'Exit'
+				on_release: exit()
 
 <LoginModal>:
 	size_hint: 0.8, 0.5
