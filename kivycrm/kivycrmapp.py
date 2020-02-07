@@ -44,6 +44,7 @@ class KivycrmApp(App):
                 'port': 80,
                 'username': '',
                 'password': '',
+                'remember': '',
             }
         )
 
