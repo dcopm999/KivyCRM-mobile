@@ -26,8 +26,11 @@ class KivycrmApp(App):
 
     def build(self):
         self.settings_cls = SettingsWithSidebar
+        self.SCREEN_MANAGER.config = self.config
         self.SCREEN_MANAGER.add_widget(screens.MainScreen(name='Main'))
-        self.SCREEN_MANAGER.current= 'Main'
+        self.SCREEN_MANAGER.add_widget(screens.LoginScreen(name='Login'))
+        self.SCREEN_MANAGER.transition.direction = 'right'
+        self.SCREEN_MANAGER.current= 'Login'
         return self.SCREEN_MANAGER
 
     def build_settings(self, settings):
@@ -53,10 +56,11 @@ class KivycrmApp(App):
             import cProfile
             self.profile = cProfile.Profile()
             self.profile.enable()
-
+        '''
         if not self.is_authorized:
             login_modal = modals.LoginModal(config=self.config, auto_dismiss=False)
             login_modal.open()
+        '''
 
     def on_stop(self):
         if self.DEBUG:

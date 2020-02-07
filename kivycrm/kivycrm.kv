@@ -2,22 +2,30 @@
 
 <MainScreen>:
 	ActionBar:
+		pos_hint: {'top': 1}
+		
 		ActionView:
+			use_separator: True
+
 			ActionPrevious:
 				title: 'KivyCRM'
+				with_previous: True
+				on_release:
+					root.manager.transition.direction = 'right'
+					root.manager.current = 'Login'
+			
+			ActionOverflow:
 
 			ActionButton:
 				text: 'Settings'
 				on_release:
 					app.open_settings()
-
-			ActionSeparator:
+			
 			ActionButton:
 				text: 'Exit'
 				on_release: exit()
 
-<LoginModal>:
-	size_hint: 0.8, 0.5
+<LoginScreen>:
 	padding: 25
 	
 	username: username_input
@@ -26,6 +34,8 @@
 	remember: remember_chk
 
 	BoxLayout:
+		size_hint: 0.5, 0.5
+		pos_hint: {'center_x': 0.5, 'center_y': 0.5}
 		orientation: 'vertical'
 		
 		AnchorLayout:
@@ -81,7 +91,7 @@
 			Button:
 				text: 'Login'
 				on_release:
-					root.login_callback()
+					root.on_login()
 
 			Button:
 				text: 'Exit'
