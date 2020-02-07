@@ -54,7 +54,7 @@ class KivycrmApp(App):
             self.profile.enable()
 
         if not self.is_authorized:
-            login_modal = modals.LoginModal(auto_dismiss=False)
+            login_modal = modals.LoginModal(config=self.config, auto_dismiss=False)
             login_modal.open()
 
     def on_stop(self):

@@ -1,11 +1,4 @@
 #:kivy 1.11.1
-<SettingsScreen>:
-	ActionBar:
-		ActionView:
-			ActionPrevious:
-				title: 'Settings'
-				on_release:
-					app.root.currrent = 'Main'
 
 <MainScreen>:
 	ActionBar:
@@ -30,13 +23,14 @@
 	username: username_input
 	password: password_input
 	status: status_label
+	remember: remember_chk
 
 	BoxLayout:
 		orientation: 'vertical'
 		
 		AnchorLayout:
-			size_hint: 1, 0.3
-		
+			size_hint: 1, 0.2
+
 			Label:
 				id: status_label
 				text: 'Authorization'
@@ -53,7 +47,7 @@
 				id: status_label
 				text: 'Please enter login and pasword...'
 				text_size: self.size
-				color: 0,1,0,1
+				color: 0, 1, 0, 1
 				halign: 'center'
 				valign: 'center'
 
@@ -69,7 +63,21 @@
 				hint_text: 'Password...'
 				multiline: False
 				password: True
-				
+			
+		GridLayout:
+			cols: 2
+			size_hint: 1, 0.5
+			Widget:
+			BoxLayout:
+				Label:
+					text_size: self.size
+					halign: 'right'
+					valign: 'middle'
+					text: 'Remember'
+				CheckBox:
+					halign: 'left'
+					id: remember_chk
+
 			Button:
 				text: 'Login'
 				on_release:
