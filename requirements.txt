@@ -3,3 +3,7 @@ Kivy-Garden>=0.1.4
 cython>=0.29.14
 pyjnius>=1.1.0
 virtualenvwrapper>=4.8.4
+pyttsx3
+pyaudio
+fuzzywuzzy
+SpeechRecognition

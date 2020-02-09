@@ -1,21 +1,27 @@
 from kivy.logger import Logger
 from kivy.uix.screenmanager import Screen
 from kivy.uix.settings import SettingsWithTabbedPanel
+from kivycrm.libraries.speech import SpeecherMinix
 
 
-class MainScreen(Screen):
+class MainScreen(SpeecherMinix, Screen):
     pass
 
-class SettingsScreen(Screen):
+class SettingsScreen(SpeecherMinix, Screen):
     def on_enter(self, *args, **kwargs):
         self.add_widget(SettingsWithTabbedPanel())
 
-class LoginScreen(Screen):
+class LoginScreen(SpeecherMinix, Screen):
 
     def on_pre_enter(self):
         self.username.text = self.parent.config.get('authorization', 'username')
         self.password.text = self.parent.config.get('authorization', 'password')
         self.remember.active = self.parent.config.get('authorization', 'remember')
+
+    def execute_cmd(self, cmd):
+        super(LoginScreen, self).execute_cmd(cmd)
+        if cmd.get('cmd') == 'on_login':
+            self.on_login()
 
     def on_login(self):
         if self.username.text != '' and self.password != '':

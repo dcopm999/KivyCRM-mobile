@@ -5,8 +5,8 @@ from kivy.logger import Logger
 
 from kivy.uix.settings import SettingsWithSidebar
 from kivy.uix.screenmanager import ScreenManager
-from kivycrm.libraries import (modals, screens)
 
+from kivycrm.libraries import (modals, screens)
 from kivycrm.libraries.settings import settings_json
 
 
