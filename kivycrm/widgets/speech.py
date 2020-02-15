@@ -75,7 +75,7 @@ class SpeecherMinix:
     def execute_cmd(self, cmd):
         print(cmd)
         if cmd.get('cmd') == 'login_screen':
-            self.parent.current = 'Login'
+            self.manager.current = 'Login'
         
 
     def to_speech(self, text=None):

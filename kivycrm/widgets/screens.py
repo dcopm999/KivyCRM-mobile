@@ -1,7 +1,7 @@
 from kivy.logger import Logger
 from kivy.uix.screenmanager import Screen
 from kivy.uix.settings import SettingsWithTabbedPanel
-from kivycrm.libraries.speech import SpeecherMinix
+from kivycrm.widgets.speech import SpeecherMinix
 
 
 class MainScreen(SpeecherMinix, Screen):
